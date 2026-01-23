@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 import { useSearchParams } from "react-router";
 
-export default function ItemTest() {
+export default function ItemTest({searchTerm}) {
 const [searchParams, setSearchParams] = useSearchParams();
 const [page, setPage] = useState(1);
 const [items, setItems] = useState([]);
@@ -20,7 +20,7 @@ useEffect( () => {
     else{
         fetch(`http://localhost:5000/items/${page}?search=${searchParams.get("search")}`).then(res => res.json()).then(data => setItems(data));
     }
-},[page]);
+},[page,searchParams]);
 
 useEffect( () => {
     fetch(`http://localhost:5000/items`).then(res => res.json()).then(data => setDataLength(data));

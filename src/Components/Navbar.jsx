@@ -2,11 +2,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { redirect } from "react-router";
 
-function Navbar() {
+function Navbar({searchTerm, setSearchTerm}) {
 
     const navigate = useNavigate();
 
-    const [searchTerm, setSearchTerm] = useState("");
+    
 
 
     function handleSearch(e){
@@ -18,9 +18,10 @@ function Navbar() {
         navigate({
             pathname: "/test",
             search: `?search=${encodeURIComponent(searchTerm)}`,
-            state: { some: "state" },
+            state: { searchParams: `${searchTerm}` },
             });
         }
+
     }
 
     return (  

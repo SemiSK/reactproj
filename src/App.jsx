@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar'
 import Item from './Components/Item'
 import Homepage from './Components/Homepage'
 import ItemTest from './Components/ItemTest'
+import MainTemp from './Components/MainTemp'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -14,14 +15,7 @@ function App() {
   return (
     <>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"></link>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Homepage/>} />
-        <Route path="/Items" element={<Items/>} />
-        <Route path="/test" element={<ItemTest/>} />
-        <Route path=":itemId" element={<Item/>} />
-
-      </Routes>
+      <MainTemp/>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </>
   )
