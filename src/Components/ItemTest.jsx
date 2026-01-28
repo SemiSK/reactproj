@@ -61,7 +61,7 @@ function prevPage(){
     {items.map((item) =>
         <tr key={item.id}>
         <th scope="row">{item.id}</th>
-        <NavLink to={`/${item.id}`}><td>{item.name}</td></NavLink>
+        <td><NavLink to={`/${item.id}`}>{item.name}</NavLink></td>
         <td>{item.buy_price}</td>
         <td>{item.buy_quantity}</td>
         <td>{item.sell_price}</td>

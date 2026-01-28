@@ -35,13 +35,13 @@ function Navbar({searchTerm, setSearchTerm}) {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <NavLink to={"/"}><a class="nav-link active" aria-current="page">Home</a></NavLink>
+                    <NavLink to={"/"} className={"nav-link"}>Home</NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink to={"Items"}><a class="nav-link">Link</a></NavLink>
+                    <NavLink to={"Items"} className={"nav-link"}>Link</NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink to={"test"}><a class="nav-link">Items Test</a></NavLink>
+                    <NavLink to={"test"} className={"nav-link"}>Items Test</NavLink>
                     </li>
                 </ul>
                 <form class="d-flex" role="search" onSubmit={handleSearch}>
