@@ -1,6 +1,4 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { redirect } from "react-router";
 
 function Navbar({searchTerm, setSearchTerm}) {
 
@@ -14,7 +12,7 @@ function Navbar({searchTerm, setSearchTerm}) {
         if (searchTerm.trim() !== "") {
         // navigate to the search route
         // redirect(`/test?search=${encodeURIComponent(searchTerm)}`);
-
+        
         navigate({
             pathname: "/test",
             search: `?search=${encodeURIComponent(searchTerm)}`,
@@ -28,7 +26,7 @@ function Navbar({searchTerm, setSearchTerm}) {
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Guild Wars Trade Post</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,10 +36,10 @@ function Navbar({searchTerm, setSearchTerm}) {
                     <NavLink to={"/"} className={"nav-link"}>Home</NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink to={"Items"} className={"nav-link"}>Link</NavLink>
+                    <NavLink to={"Items"} className={"nav-link"}>Bad List</NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink to={"test"} className={"nav-link"}>Items Test</NavLink>
+                    <NavLink to={"test"} className={"nav-link"}>Paginated List</NavLink>
                     </li>
                 </ul>
                 <form class="d-flex" role="search" onSubmit={handleSearch}>

@@ -26,7 +26,7 @@ app.get("/api/hello", (req, res) => {
 app.get("/items", (req, res) => {
   const search = (req.query.search || "").toLowerCase();
   if (search === ""){
-    res.json({dataLength})
+    res.json(data)
   }
   else{
     res.json(data.filter(item => item.name.toLowerCase().includes(search)))

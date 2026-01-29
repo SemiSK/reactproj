@@ -1,12 +1,4 @@
-import { useState } from 'react'
 import './App.css'
-import data from './data/data.json'
-import { Route, Routes } from "react-router"
-import Items from './Components/items'
-import Navbar from './Components/Navbar'
-import Item from './Components/Item'
-import Homepage from './Components/Homepage'
-import ItemTest from './Components/ItemTest'
 import MainTemp from './Components/MainTemp'
 
 function App() {
